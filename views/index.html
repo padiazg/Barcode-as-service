@@ -13,6 +13,12 @@
 				border-bottom: 1px solid lightgray;
 				font-weight: bold;
 			}
+			h2 {
+				font-weight: bold;
+                                font-style: italic;
+                                font-size: 16px;
+                                /*border-bottom: 1px solid lightgray;*/
+			}                        
 			h4 {
 				font-weight: bold;
 			}
@@ -27,53 +33,141 @@
 				border-color: steelblue;
 				border-style: solid;
 				padding: 12px;
-			}			
+			}
+                        TD {
+                            vertical-align: top;
+                            padding: 10px;
+                        }                        
 		</style>
     </head>
     <body>
         <H1>Barcode server</H1>
         
-		<div class="BarcodeExample">
-			<H4>EAN13</h4>
-			<code>/ean13?value=7840058004215</code>
-			<br>
-			<img src="/ean13?value=7840058004215" />
+        <h2>Parameters</h2>
+        <code>
+            <b>value</b>=value for the code to be generated<br/>
+            <b>scale</b>=scale for the image        
+        </code>
+        <h2>Examples</h2>
+
+        <div class="BarcodeExample">
+            <H4>EAN13</h4>
+            <table>
+                <tr>
+                    <td>
+                        <code>/ean13?<b>value</b>=7840058004215</code>
+                        <br>
+                        <img src="/ean13?value=7840058004215" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>/ean13?<b>value</b>=7840058004215&<b>scale</b>=2</code>
+                        <br>
+                        <img src="/ean13?value=7840058004215&scale=2" />                                
+                    </td>
+                </tr>
+            </table>
         </div>
-		
-		<div class="BarcodeExample">
-			<H4>CODE39</h4>
-			<code>/code39?value=12345678</code>
-			<br>
-			<img src="code39?value=12345678" />       
+        <div class="BarcodeExample">
+            <H4>CODE39</h4>
+            <table>
+                <tr>
+                    <td>
+                        <code>/code39?<b>value</b>=12345678</code>
+                        <br>
+                        <img src="code39?value=12345678" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>/code39?<b>value</b>=12345678&<b>scale</b>=2</code>
+                        <br>
+                        <img src="code39?value=12345678&scale=2" />                                
+                    </td>
+                </tr>
+            </table>                    
         </div>
        
         <div class="BarcodeExample">
-			<H4>CODE128</h4>
-			<code>/code128?value=98380d7d-85df-456f-901d-3b325ee86e07</code>
-			<br>
-			<img src="code128?value=98380d7d-85df-456f-901d-3b325ee86e07" />       
-		</div>
+            <H4>CODE128</h4>
+           <table>
+                <tr>
+                    <td>
+                        <code>/code128?<b>value</b>=98380d7d-85df-456f-901d-3b325ee86e07</code>
+                        <br>
+                        <img src="code128?value=98380d7d-85df-456f-901d-3b325ee86e07" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>/code128?<b>value</b>=98380d7d-85df-456f-901d-3b325ee86e07&<b>scale</b>=2</code>
+                        <br>
+                        <img src="code128?value=98380d7d-85df-456f-901d-3b325ee86e07&scale=2" />                                
+                    </td>
+                </tr>
+            </table>             
+        </div>
 			
         <div class="BarcodeExample">
-			<H4>PDF417</h4>
-			<code>/pdf417?value=patricio+antonio+diaz+gimenez</code>
-			<br>
-			<img src="pdf417?value=patricio+antonio+diaz+gimenez" />  
-		</div>
+            <H4>PDF417</h4>
+           <table>
+                <tr>
+                    <td>
+                        <code>/pdf417?<b>value</b>=patricio+antonio+diaz+gimenez</code>
+                        <br>
+                        <img src="pdf417?value=patricio+antonio+diaz+gimenez" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>/pdf417?<b>value</b>=patricio+antonio+diaz+gimenez&<b>scale</b>=2</code>
+                        <br>
+                        <img src="pdf417?value=patricio+antonio+diaz+gimenez&scale=2" />                                
+                    </td>
+                </tr>
+            </table> 
+        </div>
         
         <div class="BarcodeExample">
-			<H4>QR</h4>
-			<code>/qr?value=98380d7d-85df-456f-901d-3b325ee86e07</code>
-			<br>
-			<img src="qr?value=98380d7d-85df-456f-901d-3b325ee86e07" />         
-		</div>
+            <H4>QR</h4>
+            <table>
+                <tr>
+                    <td>
+                        <code>/qr?<b>value</b>=98380d7d-85df-456f-901d-3b325ee86e07</code>
+                        <br>
+                        <img src="qr?value=98380d7d-85df-456f-901d-3b325ee86e07" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>/qr?<b>value</b>=98380d7d-85df-456f-901d-3b325ee86e07&<b>scale</b>=2</code>
+                        <br>
+                        <img src="qr?value=98380d7d-85df-456f-901d-3b325ee86e07&scale=2" />                                
+                    </td>
+                </tr>
+            </table>                         
+        </div>
 
         <div class="BarcodeExample">
-			<H4>DataMatrix</h4>
-			<code>/datamatrix?value=98380d7d-85df-456f-901d-3b325ee86e07</code>
-			<br>
-			<img src="datamatrix?value=98380d7d-85df-456f-901d-3b325ee86e07" />         
-		</div>
+            <H4>DataMatrix</h4>
+            <table>
+                <tr>
+                    <td>
+                        <code>/datamatrix?<b>value</b>=98380d7d-85df-456f-901d-3b325ee86e07</code>
+                        <br>
+                        <img src="datamatrix?value=98380d7d-85df-456f-901d-3b325ee86e07" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>/datamatrix?<b>value</b>=98380d7d-85df-456f-901d-3b325ee86e07&<b>scale</b>=2</code>
+                        <br>
+                        <img src="datamatrix?value=98380d7d-85df-456f-901d-3b325ee86e07&scale=2" />                                
+                    </td>
+                </tr>
+            </table>                          
+	</div>
         
     </body>
 </html>
